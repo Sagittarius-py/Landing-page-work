@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #000;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  overflow: hidden;
+  background-image: url("../img/gory2.png");
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  position: absolute;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(243, 244, 245, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(31, 38, 135, 0.8);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.wrapper {
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mountains {
+  background: url("../img/gory2-removebg.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-500px) scale(3.8);
+  z-index: 2;
+}
+
+.title {
+  transform: translateZ(-700px) translateX(-75vw) translateY(-50vh) scale(1.7);
+  z-index: 1;
+  width: 80vw;
+  height: 28vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12vh;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 15vh;
+}
+
+#title {
+  color: rgba(31, 38, 135, 0.8);
+  font-size: 10vw;
+  font-weight: 700;
+}
+
+.bike {
+  background: url("../img/rower.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-200px) translateX(20vw) translateY(20vh) scale(1)
+    rotate(-5deg);
+  z-index: 4;
+}
+
+.snow {
+  background: url("../img/fale.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(0) translateY(300px) scale(1);
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-btn {
+  position: absolute;
+  z-index: 10;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  color: white;
+  font-size: 20pt;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+div#video-container {
+  z-index: 10;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f5;
+  padding: 5vh 0 5vh 0;
+}
+
+video {
+  min-width: 80vw;
+  max-width: 90vw;
+}
+
+.vid-btn {
+  bottom: 1.5vh;
+}
+
+.snow2 {
+  background: url("../img/fale2.png") no-repeat center;
+  background-size: cover;
+  transform: translateY(-32vh) scale(-1) scaleY(0.8);
+  z-index: 7;
+}
+
+@media (min-width: 1024px) {
+  .mountains,
+  .title,
+  .bike,
+  .people2,
+  .snow,
+  .snow2,
+  .hero-text {
+    background-size: contain;
+  }
+}
+
+.contact-container {
+  width: 100%;
+  height: 140vh;
+  background-image: url("../img/tlo2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 6;
+  padding-top: 40vh;
+  color: rgba(31, 38, 135, 1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#contact-title {
+  width: 16vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -20vh 42vw 0 42vw;
+  font-size: 40pt;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-form {
+  width: 80vw;
+  height: 70vh;
+  margin: 10vh 10vw 0 10vw;
+  background: rgba(255, 255, 255, 0.98);
+  display: flex;
+  flex-flow: row;
+  border-radius: 20px;
+  color: rgba(31, 38, 135, 0.8);
+}
+.form {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-shadow: 0px 2px 30px rgba(31, 38, 135, 0.7);
+  font-size: 30pt;
+  margin-bottom: 2vh;
+}
+.subject-form {
+  border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+input,
+textarea {
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  min-width: 200px;
+  min-height: 30px;
+  color: rgba(31, 38, 135, 1);
+}
+label {
+  font-size: 20pt;
+}
+#subject-name {
+  width: 200px;
+  height: 30px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(31, 38, 135, 0.5);
+  padding: 10px;
+}
+
+#subject-tresc {
+  width: 80%;
+  height: 20vh;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.separator {
+  border: 1px solid rgba(31, 38, 135, 0.5);
+  box-shadow: 0 0 100px 10px rgba(31, 38, 135, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 2px;
+  /* background-color: #000; */
+}
+.newsletter-form {
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+}
+.newsletter-email {
+  float: right;
+}
+
+.submit {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.submit::hover {
+  background-color: rgba(31, 38, 135, 0.6);
+  color: white;
+  transition: 0.2s;
+}
+
+/* cokolwiek; */
