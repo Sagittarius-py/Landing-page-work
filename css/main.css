@@ -1,303 +1,318 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 
-@media (min-width: 1024px) {
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: "Roboto", sans-serif;
-    scroll-behavior: smooth;
-  }
+::-webkit-scrollbar {
+  width: 8px;
+  position: absolute;
+  left: 0;
+}
 
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    background-color: #000;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    overflow: hidden;
-    background-image: url("../img/gory2.png");
-  }
+::-webkit-scrollbar-track {
+  background: rgba(243, 244, 245, 1);
+}
 
-  ::-webkit-scrollbar {
-    width: 8px;
-    position: absolute;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(31, 38, 135, 0.8);
+  border-radius: 4px;
+}
 
-  ::-webkit-scrollbar-track {
-    background: rgba(243, 244, 245, 1);
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgba(31, 38, 135, 0.8);
-    border-radius: 4px;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: "Roboto", sans-serif;
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #000;
+  font-weight: 300;
+  overflow: hidden;
+  background-image: url("../img/gory2.png");
+}
 
-  .wrapper {
-    max-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 300px;
-  }
+.wrapper {
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
 
-  .parallax__group {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    transform-style: preserve-3d;
-  }
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
 
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.title {
+  transform: translateZ(-700px) translateX(-75vw) translateY(-50vh) scale(1.7);
+  z-index: 1;
+  width: 80vw;
+  height: 28vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12vh;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 15vh;
+}
 
-  .mountains {
-    background: url("../img/gory2-removebg.png") no-repeat center;
-    background-size: cover;
-    transform: translateZ(-500px) scale(3.8);
-    z-index: 2;
-  }
+#title {
+  color: rgba(31, 38, 135, 0.8);
+  font-size: 7vw;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
 
-  .title {
-    transform: translateZ(-700px) translateX(-75vw) translateY(-50vh) scale(1.7);
-    z-index: 1;
-    width: 80vw;
-    height: 28vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12vh;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 15vh;
-  }
+#logo {
+  width: 10vw;
+  margin-right: 4vw;
+}
 
-  #title {
-    color: rgba(31, 38, 135, 0.8);
-    font-size: 10vw;
-    font-weight: 700;
-  }
+.mountains {
+  background: url("../img/gory2-removebg.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-500px) scale(3.8);
+  z-index: 2;
+}
 
+.bike {
+  background: url("../img/rower3.png") no-repeat center;
+  transform: translateZ(-200px) translateX(25vw) translateY(15vh) scale(1.2)
+    rotate(-5deg);
+  z-index: 4;
+  background-size: cover;
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
   .bike {
-    background: url("../img/rower.png") no-repeat center;
-    background-size: cover;
-    transform: translateZ(-200px) translateX(20vw) translateY(20vh) scale(1)
+    transform: translateZ(-200px) translateX(25vw) translateY(20vh) scale(1.2)
       rotate(-5deg);
-    z-index: 4;
   }
-  @media (min-width: 1200px) {
-    .bike {
-      transform: translateZ(-200px) translateX(20vw) translateY(15vh) scale(1)
-        rotate(-5deg);
-    }
-  }
+}
 
-  .snow {
-    background: url("../img/fale.png") no-repeat center;
-    background-size: cover;
-    transform: translateZ(0) translateY(30vh) scale(1);
-    z-index: 6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .arrow-btn {
-    position: absolute;
-    z-index: 10;
-    height: 50px;
-    width: 50px;
-    margin-bottom: 0;
-    border: none;
-    background-color: rgba(0, 0, 0, 1);
-    border-radius: 50%;
-    color: white;
-    font-size: 20pt;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  }
+.snow {
+  background: url("../img/fale.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(0) translateY(30vh) scale(1);
+  z-index: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.arrow-btn {
+  position: absolute;
+  z-index: 10;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  color: white;
+  font-size: 20pt;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+div#video-container {
+  z-index: 10;
+  width: 100vw;
+  /* height: 100%; */
+  background-color: #f3f4f5;
+  padding: 10vh 0 5vh 0;
+  margin-top: -5vh;
+  display: flex;
+  justify-content: center;
+}
+video {
+  min-width: 90vw;
+  max-width: 100vw;
+  height: 90vh;
+}
+.snow2 {
+  background: url("../img/fale2.png") no-repeat center;
+  background-size: cover;
+  transform: translateY(-37vh) scale(-1) scaleY(0.8);
+  z-index: 7;
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
   div#video-container {
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f3f4f5;
-    padding: 5vh 0 5vh 0;
-    margin-top: -5vh;
-    padding-top: 5vh;
+    margin-top: -10vh;
+    height: 95vh;
   }
-
   video {
-    margin-top: 10vh;
-    min-width: 90vw;
-    max-width: 100vw;
+    margin-top: -10vh;
+    width: 98vw;
   }
-
-  @media (max-width: 1400px) {
-    div#video-container {
-      margin-top: -15vh;
-    }
-  }
-
   .snow2 {
-    background: url("../img/fale2.png") no-repeat center;
-    background-size: cover;
     transform: translateY(-42vh) scale(-1) scaleY(0.8);
     z-index: 7;
   }
+}
+.contact-container {
+  width: 100%;
+  height: 120vh;
+  background-image: url("../img/tlo2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 10;
+  margin: -6vh 0 0 0;
+  padding: 50vh 0 10vh 0;
+  color: rgba(31, 38, 135, 1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-  @media (min-width: 1024px) {
-    .mountains,
-    .title,
-    .bike,
-    .people2,
-    .snow,
-    .snow2,
-    .hero-text {
-      background-size: contain;
-    }
-  }
+#contact-title {
+  width: 20vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -20vh 40vw 0 39.5vw;
+  font-size: 40pt;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
-  .contact-container {
-    width: 100%;
-    height: 120vh;
-    background-image: url("../img/tlo2.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 10;
-    padding: 40vh 0 10vh 0;
-    color: rgba(31, 38, 135, 1);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+.contact-form {
+  width: 80vw;
+  height: 70vh;
+  margin: 10vh 10vw 0 10vw;
+  background: rgba(255, 255, 255, 0.98);
+  display: flex;
+  flex-flow: row;
+  border-radius: 20px;
+  color: rgba(31, 38, 135, 0.8);
+}
+.form {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-shadow: 0px 2px 30px rgba(31, 38, 135, 0.7);
+  font-size: 30pt;
+  margin-bottom: 2vh;
+}
+.subject-form {
+  border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+input,
+textarea {
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  min-width: 200px;
+  min-height: 30px;
+  color: rgba(31, 38, 135, 1);
+}
+label {
+  font-size: 20pt;
+}
+#subject-name {
+  width: 200px;
+  height: 30px;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(31, 38, 135, 0.5);
+  padding: 10px;
+}
 
-  #contact-title {
-    width: 16vw;
-    height: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: -20vh 42vw 0 42vw;
-    font-size: 40pt;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-  }
+#subject-tresc {
+  width: 80%;
+  height: 20vh;
+  box-sizing: border-box;
+  resize: vertical;
+}
 
-  .contact-form {
-    width: 80vw;
-    height: 70vh;
-    margin: 10vh 10vw 0 10vw;
-    background: rgba(255, 255, 255, 0.98);
-    display: flex;
-    flex-flow: row;
-    border-radius: 20px;
-    color: rgba(31, 38, 135, 0.8);
-  }
-  .form {
-    width: 50%;
-    height: 100%;
-    padding: 20px;
-  }
-  h2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-shadow: 0px 2px 30px rgba(31, 38, 135, 0.7);
-    font-size: 30pt;
-    margin-bottom: 2vh;
-  }
-  .subject-form {
-    border-radius: 20px 0 0 20px;
-    border-radius: 20px 0 0 20px;
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-  }
-  input,
-  textarea {
-    margin: 20px;
-    border: 1px solid rgba(255, 255, 255, 1);
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    min-width: 200px;
-    min-height: 30px;
-    color: rgba(31, 38, 135, 1);
-  }
-  label {
-    font-size: 20pt;
-  }
-  #subject-name {
-    width: 200px;
-    height: 30px;
-  }
-  input::placeholder,
-  textarea::placeholder {
-    color: rgba(31, 38, 135, 0.5);
-    padding: 10px;
-  }
+.separator {
+  border: 1px solid rgba(31, 38, 135, 0.5);
+  box-shadow: 0 0 100px 10px rgba(31, 38, 135, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 2px;
+  /* background-color: #000; */
+}
+.newsletter-form {
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+}
+.newsletter-email {
+  float: right;
+}
 
-  #subject-tresc {
-    width: 80%;
-    height: 20vh;
-    box-sizing: border-box;
-    resize: vertical;
-  }
+.submit {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.submit::hover {
+  background-color: rgba(31, 38, 135, 0.6);
+  color: white;
+  transition: 0.2s;
+}
 
-  .separator {
-    border: 1px solid rgba(31, 38, 135, 0.5);
-    box-shadow: 0 0 100px 10px rgba(31, 38, 135, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px 0 0 20px;
-    height: 100%;
-    width: 2px;
-    /* background-color: #000; */
-  }
-  .newsletter-form {
-    border-radius: 20px 0 0 20px;
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-  }
-  .newsletter-email {
-    float: right;
-  }
+/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
 
-  .submit {
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  .submit::hover {
-    background-color: rgba(31, 38, 135, 0.6);
-    color: white;
-    transition: 0.2s;
+@media (min-width: 1024px) {
+  .mountains,
+  .title,
+  .bike,
+  .people2,
+  .snow,
+  .snow2,
+  .hero-text {
+    background-size: contain;
   }
 
   @media (min-width: 1251px) and (max-width: 1800px) {
@@ -310,6 +325,126 @@
     .sec-kont {
       /* position: absolute; */
       margin-top: -42vh;
+    }
+  }
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!! MOBILKI !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! MOBILKI !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! MOBILKI !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! MOBILKI !!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!! MOBILKI !!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (max-width: 1023px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .title {
+    width: 120vw;
+    height: 20vh;
+    border-radius: 10vh;
+    margin-left: 10vw;
+  }
+  #title {
+    font-size: 10vw;
+  }
+
+  .mountains {
+    transform: translateZ(-500px) translateY(20vh) scale(3.8);
+  }
+
+  .bike {
+    transform: translateZ(-200px) translateX(20vw) translateY(12vh) scale(1.3)
+      rotate(-15deg);
+  }
+
+  .snow {
+    transform: translateY(25vh) scale(1.6);
+  }
+  @media (max-width: 500px) {
+    .snow {
+      transform: translateY(20vh) scale(1.8);
+    }
+  }
+
+  .arrow-btn {
+    height: 35px;
+    width: 35px;
+    font-size: 14pt;
+    box-shadow: none;
+  }
+
+  div#video-container {
+    width: 100vw;
+    height: 55vh;
+    transform: translateY(-15vh);
+    display: flex;
+    flex-direction: column;
+  }
+
+  video {
+    /* transform: translateY(-10vh); */
+    top: 0;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .snow2 {
+    max-width: 200vw;
+    height: 20vh;
+    top: 0;
+    position: absolute;
+    transform: translateY(-0vh) scale(-1) scale(2);
+  }
+  .contact-container {
+    padding-top: 30vh;
+    margin-top: -60vh;
+    height: 170vh;
+  }
+
+  #contact-title {
+    width: 80vw;
+    height: 8vh;
+    margin: -10vh 10vw 0 10vw;
+    font-size: 30pt;
+    border-radius: 20px;
+  }
+  .contact-form {
+    flex-flow: column;
+    height: 250vh;
+  }
+  .form {
+    width: 100%;
+    padding: 20px;
+  }
+  h2 {
+    width: 80%;
+    text-shadow: none;
+    font-size: 15pt;
+  }
+  label {
+    font-size: 10pt;
+  }
+  .separator {
+    border: 1px solid rgba(31, 38, 135, 0.5);
+    box-shadow: 0 0 100px 10px rgba(31, 38, 135, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px 0 0 20px;
+    height: 2px;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .mountains,
+    .title,
+    .bike,
+    .people2,
+    .snow,
+    .snow2,
+    .hero-text {
+      background-size: contain;
     }
   }
 }
