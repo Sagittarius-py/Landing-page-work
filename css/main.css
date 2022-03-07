@@ -81,7 +81,8 @@ body {
 }
 
 #title {
-  color: rgba(31, 38, 135, 0.8);
+  /* color: rgba(31, 38, 135, 0.8); */
+  color: black;
   font-size: 7vw;
   font-weight: 700;
   display: flex;
@@ -201,7 +202,7 @@ video {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
+  border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -297,35 +298,15 @@ textarea::placeholder {
   color: white;
   transition: 0.2s;
 }
-
-/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
-/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
-/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
-/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
-/*!!!!!!!!!!!!!!!!!!!!!! DESKTOPY !!!!!!!!!!!!!!!!!!!!!!*/
-
-@media (min-width: 1024px) {
-  .mountains,
-  .title,
-  .bike,
-  .people2,
-  .snow,
-  .snow2,
-  .hero-text {
-    background-size: contain;
+@media (min-width: 1251px) and (max-width: 1800px) {
+  .sec-kont {
+    position: absolute;
+    margin-top: -28vh;
   }
-
-  @media (min-width: 1251px) and (max-width: 1800px) {
-    .sec-kont {
-      position: absolute;
-      margin-top: -28vh;
-    }
-  }
-  @media (max-width: 1250px) {
-    .sec-kont {
-      /* position: absolute; */
-      margin-top: -42vh;
-    }
+}
+@media (max-width: 1250px) {
+  .sec-kont {
+    margin-top: -42vh;
   }
 }
 
@@ -335,116 +316,157 @@ textarea::placeholder {
 /*!!!!!!!!!!!!!!!!!!!!!! MOBILKI !!!!!!!!!!!!!!!!!!!!!!*/
 /*!!!!!!!!!!!!!!!!!!!!!! MOBILKI !!!!!!!!!!!!!!!!!!!!!!*/
 
-@media (max-width: 1023px) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
+@media screen and (orientation: portrait) {
+  @media (max-width: 1023px) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
 
-  .title {
-    width: 120vw;
-    height: 20vh;
-    border-radius: 10vh;
-    margin-left: 10vw;
-  }
-  #title {
-    font-size: 10vw;
-  }
+    .title {
+      width: 120vw;
+      height: 20vh;
+      border-radius: 10vh;
+      margin-left: 10vw;
+    }
+    #title {
+      font-size: 10vw;
+    }
 
-  .mountains {
-    transform: translateZ(-500px) translateY(20vh) scale(3.8);
-  }
+    .mountains {
+      transform: translateZ(-500px) translateY(20vh) scale(3.8);
+    }
 
-  .bike {
-    transform: translateZ(-200px) translateX(20vw) translateY(12vh) scale(1.3)
-      rotate(-15deg);
-  }
+    .bike {
+      transform: translateZ(-200px) translateX(20vw) translateY(12vh) scale(1.3)
+        rotate(-15deg);
+    }
 
-  .snow {
-    transform: translateY(25vh) scale(1.6);
-  }
-  @media (max-width: 500px) {
     .snow {
-      transform: translateY(20vh) scale(1.8);
+      transform: translateY(25vh) scale(1.6);
+    }
+
+    @media (max-width: 500px) {
+      .snow {
+        transform: translateY(21vh) scale(1.8);
+      }
+    }
+    @media (min-height: 700px) and (max-height: 820px) {
+      .snow {
+        transform: translateY(25vh) scale(1.8);
+      }
+    }
+
+    .arrow-btn {
+      height: 35px;
+      width: 35px;
+      font-size: 14pt;
+      box-shadow: none;
+    }
+
+    div#video-container {
+      width: 100vw;
+      height: 55vh;
+      transform: translateY(-15vh);
+      display: flex;
+      flex-direction: column;
+    }
+
+    video {
+      /* transform: translateY(-10vh); */
+      top: 0;
+      width: 100vw;
+      margin: 0;
+    }
+
+    .snow2 {
+      max-width: 200vw;
+      height: 20vh;
+      top: 0;
+      position: absolute;
+      transform: translateY(-0vh) scale(-1) scale(2);
+    }
+    .contact-container {
+      padding-top: 30vh;
+      margin-top: -60vh;
+      height: 170vh;
+    }
+
+    #contact-title {
+      width: 80vw;
+      height: 8vh;
+      margin: -10vh 10vw 0 10vw;
+      font-size: 30pt;
+      border-radius: 20px;
+    }
+    .contact-form {
+      flex-flow: column;
+      height: 250vh;
+    }
+    .form {
+      width: 100%;
+      padding: 20px;
+    }
+    h2 {
+      width: 80%;
+      text-shadow: none;
+      font-size: 15pt;
+    }
+    label {
+      font-size: 10pt;
+    }
+    .separator {
+      height: 2px;
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      .mountains,
+      .title,
+      .bike,
+      .people2,
+      .snow,
+      .snow2,
+      .hero-text {
+        background-size: contain;
+      }
     }
   }
-
-  .arrow-btn {
-    height: 35px;
-    width: 35px;
-    font-size: 14pt;
-    box-shadow: none;
-  }
-
-  div#video-container {
-    width: 100vw;
-    height: 55vh;
-    transform: translateY(-15vh);
-    display: flex;
-    flex-direction: column;
-  }
-
-  video {
-    /* transform: translateY(-10vh); */
-    top: 0;
-    width: 100vw;
-    margin: 0;
-  }
-
-  .snow2 {
-    max-width: 200vw;
-    height: 20vh;
-    top: 0;
-    position: absolute;
-    transform: translateY(-0vh) scale(-1) scale(2);
-  }
-  .contact-container {
-    padding-top: 30vh;
-    margin-top: -60vh;
-    height: 170vh;
-  }
-
-  #contact-title {
-    width: 80vw;
-    height: 8vh;
-    margin: -10vh 10vw 0 10vw;
-    font-size: 30pt;
-    border-radius: 20px;
-  }
-  .contact-form {
-    flex-flow: column;
-    height: 250vh;
-  }
-  .form {
-    width: 100%;
-    padding: 20px;
-  }
-  h2 {
-    width: 80%;
-    text-shadow: none;
-    font-size: 15pt;
-  }
-  label {
-    font-size: 10pt;
-  }
-  .separator {
-    border: 1px solid rgba(31, 38, 135, 0.5);
-    box-shadow: 0 0 100px 10px rgba(31, 38, 135, 0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px 0 0 20px;
-    height: 2px;
-    width: 100%;
-  }
-
+}
+@media screen and (orientation: landscape) {
   @media (max-width: 1024px) {
-    .mountains,
-    .title,
-    .bike,
-    .people2,
-    .snow,
-    .snow2,
-    .hero-text {
-      background-size: contain;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .contact-container {
+      padding-top: 60vh;
+      height: 230vh;
+    }
+    #contact-title {
+      width: 40vw;
+      height: 10vh;
+      margin: -30vh 30vw 0 30vw;
+      font-size: 30pt;
+      border-radius: 20px;
+    }
+    h2 {
+      width: 80%;
+      text-shadow: none;
+      font-size: 15pt;
+    }
+    label {
+      font-size: 12pt;
+    }
+    .contact-form {
+      height: 170vh;
     }
   }
+}
+.mountains,
+.title,
+.bike,
+.people2,
+.snow,
+.snow2,
+.hero-text {
+  background-size: contain;
 }
